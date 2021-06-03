@@ -28,7 +28,7 @@ The Energy Data Observatory (EDO), comprising phases 2 and 3 of the SEAT/EDP Yea
 
 Following discussions with the EDP Technical Advisory Group, the scope of the EDO has shifted towards providing a tool that can ease the adoption and implementation of differential privacy by allowing stakeholders to gain an intuitive understanding of its mechanisms and their implications.  With this shift in scope, it is less important that the synthetic dataset used in the EDO is realistic, and more important that it illustrates a range of use cases that stakeholders may encounter, especially those that may be difficult to differentially privatize, e.g. small datasets and/or datasets with significant high outliers.
 
-THe current design plan of the EDO includes a load shape database which presents a small library of load shapes, and interactive tooling to allow users to construct larger datasets on the fly, according to parameters selected by the user interactively, through the use of duplication of load shapes with the addition of random additive noise and linear scaling factors.  
+The current design plan of the EDO includes a load shape database which presents a small library of load shapes, and interactive tooling to allow users to construct larger datasets on the fly, according to parameters selected by the user interactively, through the use of duplication of load shapes with the addition of random additive noise and linear scaling factors.  
 
 
 ## The Load Shape Databaase
@@ -38,13 +38,7 @@ The load shape database requires data be provided in the following form:
 - A time series database, with columns for timestamp, meter_id, and usage, with one entry per hour, spanning at least one year per meter.
 - A metadata table, with columns for meter_id and any available metadata columns.
 
-This repository contains a Jupyter notebook which includes code to extract a set of loadshapes from the LBNL [AlphaBuilding Synthetic Dataset](https://lbnl-eta.github.io/AlphaBuilding-SyntheticDataset/).  This dataset contains nine high-resolution simulations of an office building, under three different efficiency regimes and in three different climate zones.  The notebook extracts a facility-level hourly electricity trace and reformated it into the required time series and metadata formats.
+This repository contains a [Jupyter notebook](https://github.com/recurve-inc/edp_load_shape_database/blob/main/Synthetic%20extraction.ipynb) which includes code to extract a set of loadshapes from the LBNL [AlphaBuilding Synthetic Dataset](https://lbnl-eta.github.io/AlphaBuilding-SyntheticDataset/).  This dataset contains nine high-resolution simulations of an office building, under three different efficiency regimes and in three different climate zones.  The notebook extracts a facility-level hourly electricity trace and reformated it into the required time series and metadata formats.
 
-These nine traces form the 
-
-
-
-During discussions with the EDP Technical Advisory Group, 
-
-the scope of the Energy Data Observatory (EDO -- Phase 2 of the Year 3 plan) has expanded
+These nine traces form the basis of the EOD load shape database which will be used to construct populations in the EDO according to the specifications of the interactive user.
 
